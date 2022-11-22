@@ -1,0 +1,187 @@
+<!--
+    Simple static Telegram WebApp. Does not verify the WebAppInitData, as a bot token would be needed for that.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog</title>
+    <script src="./js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+</head>
+<script type="text/javascript">
+    const colorPicker = new iro.ColorPicker('#picker', {
+        borderColor: "#ffffff",
+        borderWidth: 1,
+        width: Math.round(document.documentElement.clientWidth / 2),
+    });
+    colorPicker.on('color:change', function (color) {
+        document.body.style.background = color.hexString;
+    });
+
+    Telegram.WebApp.ready();
+    Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(function () {
+        const data = JSON.stringify({ hex: colorPicker.color.hexString, rgb: colorPicker.color.rgb });
+        Telegram.WebApp.sendData(data);
+        Telegram.WebApp.close();
+    });
+</script>
+
+<body style="background-color: #ffffff border-spacing-20">
+    <main class="m-3">
+        <div
+            class="main grid gap-4 sm:grid-cols-1 sm:space-y-1 md:grid-cols-3 md:space-y-2 lg:grid-cols-5 lg:space-y-3 place-items-center">
+            <div class="item-list border-solid border-2 p-3 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail text-center inline-grid grid-cols-2 gap-2 place-items-center">
+                    <span class="name">Rolex AA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail text-center inline-grid grid-cols-2 gap-2 place-items-center">
+                    <span class="name">Rolex AA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail text-center inline-grid grid-cols-2 gap-2 place-items-center ">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="text/javascript">
+    Telegram.WebApp.expand();
+</script>
+
+</html>
