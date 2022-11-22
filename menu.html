@@ -1,148 +1,37 @@
-<!--
-    Simple static Telegram WebApp. Does not verify the WebAppInitData, as a bot token would be needed for that.
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Simple Web App Service</title>
-    <script src="./js/telegram-web-app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <title>Menu</title>
 </head>
-<script type="text/javascript">
-    const colorPicker = new iro.ColorPicker('#picker', {
-        borderColor: "#ffffff",
-        borderWidth: 1,
-        width: Math.round(document.documentElement.clientWidth / 2),
-    });
-    colorPicker.on('color:change', function (color) {
-        document.body.style.background = color.hexString;
-    });
 
-    Telegram.WebApp.ready();
-    Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(function () {
-        const data = JSON.stringify({ hex: colorPicker.color.hexString, rgb: colorPicker.color.rgb });
-        Telegram.WebApp.sendData(data);
-        Telegram.WebApp.close();
-    });
-</script>
-
-<body style="background-color: #ffffff">
-    <main class="grid gap-4 grid-cols-3 grid-rows-3 space-y-3">
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
-        </div>
-        <div class="item-list">
-            <div class="image justify-items-center">
-                <img src="./images/rolex.png" alt="rolex">
-            </div>
-            <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
-                <span class="name">Rolex A</span>
-                <span class="price font-bold text-xl">999,99$</span>
-            </div>
+<body>
+    <main class="p-2 m-2">
+        <div class="navigation-menu inline-grid grid-cols-3 place-items-center">
+            <button
+                class="products inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'products')">
+                <img class="w-14" src="./icon/menu.svg">
+                Products
+            </button>
+            <button
+                class="services inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'services')">
+                <img class="w-14" src="./icon/king.svg">
+                Services
+            </button>
+            <button
+                class="contact inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'contact')">
+                <img class="w-14" src="./icon/contact.svg">
+                Contact
+            </button>
         </div>
     </main>
 </body>
-<script type="text/javascript">
-    Telegram.WebApp.expand();
-</script>
 
 </html>

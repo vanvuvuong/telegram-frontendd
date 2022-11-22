@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="./js/index.js"></script>
+    <script src="./js/telegram-web-app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Telegram App</title>
+</head>
+
+<body>
+    <main class="p-4 border-2 m-3">
+        <div class="navigation-menu inline-grid grid-cols-3 place-items-center align-bottom">
+            <button id="products"
+                class="products tablinks inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'products')">
+                <img class="w-14" src="./icon/menu.svg">
+                Products
+            </button>
+            <button id="services"
+                class="services tablinks inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'services')">
+                <img class="w-14" src="./icon/king.svg">
+                Services
+            </button>
+            <button id="contact"
+                class="contact tablinks inline-grid grid-rows-1 place-items-center bg-white text-black text-sm p-1 hover:bg-slate-300 active:bg-orange-200"
+                onclick="openTab(event, 'contact')">
+                <img class="w-14" src="./icon/contact.svg">
+                Contact
+            </button>
+        </div>
+    </main>
+
+    <section class="products tabcontent hidden">
+        <div
+            class="main grid gap-4 sm:grid-cols-1 sm:space-y-1 md:grid-cols-3 md:space-y-2 lg:grid-cols-5 lg:space-y-3 place-items-center">
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail text-center tablinks inline-grid grid-cols-2 gap-2 place-items-center">
+                    <span class="name">Rolex AA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail text-center inline-grid grid-cols-2 gap-2 place-items-center">
+                    <span class="name">Rolex AA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail text-center inline-grid grid-cols-2 gap-2 place-items-center ">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/nice.jpg" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+            <div class="item-list border-solid border-2 p-3">
+                <div class="image">
+                    <img src="./images/rolex.png" alt="rolex">
+                </div>
+                <div class="item-detail inline-grid grid-cols-2 gap-2 text-center">
+                    <span class="name">Rolex AAAAA</span>
+                    <span class="price font-bold text-xl">999,99$</span>
+                </div>
+                <div class="button">
+                    <button class="border-solid bg-blue-400 rounded-md">Liên hệ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services tabcontent hidden">
+        <button class=" buy-now bg-red-600 text-xl font-bold rounded-md">Red</button>
+        <button class=" buy-now bg-red-500 text-xl font-bold rounded-md">Red</button>
+        <button class=" buy-now bg-red-400 text-xl font-bold rounded-md">Red</button>
+        <button class=" buy-now bg-red-300 text-xl font-bold rounded-md">Red</button>
+        <button class=" buy-now bg-red-200 text-xl font-bold rounded-md">Red</button>
+        <button class=" buy-now bg-red-100 text-xl font-bold rounded-md">Red</button>
+    </section>
+
+    <section class="contact tabcontent hidden">
+        <h1>Just A Contact</h1>
+    </section>
+</body>
+
+</html>
